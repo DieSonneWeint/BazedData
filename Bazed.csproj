@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="System.Data.OleDb" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Check_In_document\Check_In_document.csproj" />
+    <ProjectReference Include="..\Children\Children.csproj" />
+    <ProjectReference Include="..\City_district\City_district.csproj" />
+    <ProjectReference Include="..\Dormitory\Dormitory.csproj" />
+    <ProjectReference Include="..\Eviction_data\Eviction_data.csproj" />
+    <ProjectReference Include="..\GrownUp\GrownUp.csproj" />
+    <ProjectReference Include="..\Homesteaders\Homesteaders.csproj" />
+    <ProjectReference Include="..\Inventory\Inventory.csproj" />
+    <ProjectReference Include="..\Passport_details\Passport_details.csproj" />
+    <ProjectReference Include="..\Place_of_study\Place_of_study.csproj" />
+    <ProjectReference Include="..\Place_of_work\Place_of_work.csproj" />
+    <ProjectReference Include="..\Room\Room.csproj" />
+    <ProjectReference Include="..\Room_type\Room_type.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DataSetAcs.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSetAcs.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DataSetAcs.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAcs.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
